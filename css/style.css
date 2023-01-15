@@ -13,14 +13,17 @@ body {
 }
 
 .container {
-  width: 70%;
+  width: 55%;
   height: 95%;
   margin: auto;
   background-color: #a1a1a1;
   border-radius: 9px;
   box-shadow: 0px 0px 5px #666;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
 }
 /* .container::after {
   content: "";
@@ -32,14 +35,40 @@ body {
   width: 250px;
   background-color: rgba(0, 0, 0, 0.3);
 } */
-.container .image {
-  overflow: hidden;
+.container .images-container {
   position: absolute;
-  width: 250px;
   top: 50%;
-  left: 50%;
+  left: 0;
+  width: 100%;
   transform: translate(-50%, -50%);
-  transition: all 1s;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 2s;
+  animation-name: motion;
+  animation-duration: 10s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes motion {
+  33% {
+    left: 33%;
+  }
+  66% {
+    left: 66%;
+  }
+  99% {
+    left: 99%;
+  }
+}
+.container .image {
+  /* overflow: hidden;
+  position: absolute; */
+  width: 200px;
+  /* */
+  /*  */
 }
 /* .container .image:hover {
   transform: translateX(100px);
