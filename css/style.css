@@ -40,12 +40,12 @@ body {
   top: 0;
   left: 0;
   display: flex;
-  align-items: center;
+
   width: 3000px;
   height: 600px;
   background-color: rgba(0, 0, 0, 0.8);
   animation-name: motion;
-  animation-duration: 6s;
+  animation-duration: 15s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -60,7 +60,7 @@ body {
   }
 
   100% {
-    left: -1800px;
+    left: -2000px;
   }
 }
 /* .container .images-container .slide-num {
@@ -85,6 +85,6 @@ body {
   transform: translateX(100px);
 } */
 .container .image img {
-  max-width: 100%;
+  width: 1000px;
   max-height: 100%;
 }
