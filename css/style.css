@@ -10,20 +10,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container {
-  width: 55%;
-  height: 95%;
-  margin: auto;
+  width: 770px;
+  height: 500px;
   background-color: #a1a1a1;
   border-radius: 9px;
   box-shadow: 0px 0px 5px #666;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+  align-items: center; */
   overflow: hidden;
+  position: relative;
 }
 /* .container::after {
   content: "";
@@ -37,49 +37,54 @@ body {
 } */
 .container .images-container {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  transition: all 2s;
+  width: 3000px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.8);
   animation-name: motion;
-  animation-duration: 10s;
-  animation-delay: 10s;
+  animation-duration: 6s;
+  animation-timing-function: ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+  animation-delay: 3s;
 }
 @keyframes motion {
-  33% {
-    left: 33%;
+  0% {
+    left: 0px;
   }
-  66% {
-    left: 66%;
+  50% {
+    left: -1000px;
   }
-  99% {
-    left: 99%;
+
+  100% {
+    left: -1800px;
   }
 }
-.container .image {
-  /* overflow: hidden;
-  position: absolute; */
-  width: 200px;
-  /* */
-  /*  */
+/* .container .images-container .slide-num {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: 27x;
+} */
+.container .images-container .image {
+  flex-basis: 1024px;
+  /* transform: translate(-50%, -50%); */
+
+  transition: all 1s;
 }
+/* @keyframese slide-motion {
+    0%{
+
+    }
+} */
 /* .container .image:hover {
   transform: translateX(100px);
 } */
 .container .image img {
   max-width: 100%;
   max-height: 100%;
-}
-.container .image:nth-child(1) {
-  left: 25%;
-}
-.container .image:nth-child(3) {
-  left: 75%;
 }
