@@ -40,18 +40,18 @@ body {
   top: 0;
   left: 0;
   display: flex;
-
+  transition: all 2s;
   width: 3000px;
   height: 600px;
   background-color: rgba(0, 0, 0, 0.8);
-  animation-name: motion;
+  /* animation-name: motion;
   animation-duration: 15s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-delay: 3s;
+  animation-delay: 3s; */
 }
-@keyframes motion {
+/* @keyframes motion {
   0% {
     left: 0px;
   }
@@ -62,7 +62,7 @@ body {
   100% {
     left: -2000px;
   }
-}
+} */
 /* .container .images-container .slide-num {
   position: absolute;
   top: 20px;
@@ -110,4 +110,26 @@ body {
   position: absolute;
   top: 50%;
   left: 30px;
+}
+.container ul {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex;
+}
+.container ul li {
+  line-height: 2;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: lightblue;
+  margin: 0 12px;
+  opacity: 0.9;
+  text-align: center;
+  font-size: 14px;
+}
+.container ul li.active {
+  background-color: darkblue;
 }
