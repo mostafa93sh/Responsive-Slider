@@ -88,3 +88,26 @@ body {
   width: 1000px;
   max-height: 100%;
 }
+
+.container .control-button {
+  width: 55px;
+  height: 37px;
+  text-align: center;
+  background-color: lightblue;
+  border: 1px solid darkblue;
+  border-radius: 21px;
+  color: black;
+  font-size: 11px;
+  line-height: 32px;
+  opacity: 0.8;
+}
+.next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+}
+.previous {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+}
