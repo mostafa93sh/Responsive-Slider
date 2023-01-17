@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #e1e1e1;
+  background-color: #596776;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -88,8 +88,7 @@ body {
   width: 1000px;
   max-height: 100%;
 }
-
-.container .control-button {
+.control-button {
   width: 55px;
   height: 37px;
   text-align: center;
@@ -100,18 +99,19 @@ body {
   font-size: 11px;
   line-height: 32px;
   opacity: 0.8;
+  cursor: pointer;
 }
 .next {
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 200px;
 }
 .previous {
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 200px;
 }
-.container ul {
+ul {
   position: absolute;
   bottom: 35px;
   left: 50%;
@@ -119,19 +119,18 @@ body {
   list-style: none;
   display: flex;
 }
-.container ul li {
+ul li {
   line-height: 2;
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: lightblue;
+  background-color: white;
   margin: 0 7px;
   opacity: 0.9;
   font-size: 16x;
   color: #e1e1e1;
 }
-.container ul li.active {
-  background-color: rgb(128, 128, 226);
-  box-shadow: 0px 0px 5px rgb(128, 128, 226);
+ul li.active {
+  box-shadow: 2px 2px 15px white;
   opacity: 0.8;
 }

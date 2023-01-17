@@ -4,6 +4,14 @@ const imageContainerArray = Array.from(
   document.querySelector(".images-container").children,
 );
 const imagesContainer = document.querySelector(".images-container");
+// const urlArray = [];
+// document
+//   .querySelectorAll(".container .images-container .image img")
+//   .forEach((el) => urlArray.push(el.src));
+
+// const url = urlArray.map((el) => el.replace("http://localhost:5500", "."));
+
+// console.log(url);
 
 // positionOfContainer.addEventListener("animationiteration", (e) => {
 //   console.log("e");
