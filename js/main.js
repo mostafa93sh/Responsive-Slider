@@ -4,35 +4,15 @@ const imageContainerArray = Array.from(
   document.querySelector(".images-container").children,
 );
 const imagesContainer = document.querySelector(".images-container");
-// const urlArray = [];
-// document
-//   .querySelectorAll(".container .images-container .image img")
-//   .forEach((el) => urlArray.push(el.src));
 
-// const url = urlArray.map((el) => el.replace("http://localhost:5500", "."));
-
-// console.log(url);
-
-// positionOfContainer.addEventListener("animationiteration", (e) => {
-//   console.log("e");
-// });
-
-// const bulletsItemHandler = () => {};
 imageContainerArray.forEach((img, i) => img.setAttribute("data-index", i));
 // const newListBullets = document.createElement("ul");
 const slidesNumber = imageContainerArray.length;
-// for (let i = 1; i <= slidesNumber; i++) {
-//   const newListBulletsElement = document.createElement("li");
-//   newListBulletsElement.setAttribute("data-index", i);
-//   newListBulletsElement.appendChild(document.createTextNode(i));
-//   newListBullets.appendChild(newListBulletsElement);
-// }
-// document.querySelector("main.container").appendChild(newListBullets);
+
 const listItemArray = document.querySelectorAll(`ul li`);
 const listItemLength = listItemArray.length;
-
 let index = 0;
-setInterval(() => {
+const checkAndSlideForward = () => {
   if (index < 2) {
     imagesContainer.style.left = `-${index + 1}000px`;
 
@@ -47,4 +27,55 @@ setInterval(() => {
     listItemArray[index].classList.add("active");
     imagesContainer.style.left = `0`;
   }
-}, 4000);
+};
+
+// let timeOfSilding = setInterval(checkAndSlideForward, 4000);
+// let timeToStartSlide;
+nextButton.addEventListener("click", () => {
+  // clearInterval(timeOfSilding);
+
+  if (index === 1 || index === 0) {
+    listItemArray[index].classList.remove("active");
+    index++;
+    imagesContainer.style.left = `-${index}000px`;
+
+    listItemArray[index].classList.add("active");
+
+    // const dataIndex = imageContainerArray[index].getAttribute("data-index");
+  } else if (index === 2) {
+    // listItemArray.forEach((el) => el.classList.remove("active"));
+    listItemArray[index].classList.remove("active");
+    index = 0;
+    imagesContainer.style.left = `0px`;
+    listItemArray[index].classList.add("active");
+    // imagesContainer.style.left = `0`;
+  } else {
+    console.log("SOMETHING WENT WRONG");
+  }
+  // timeToStartSlide = setTimeout(() => {
+  //   timeOfSilding = setInterval(checkAndSlideForward, 4000);
+  // }, 4000);
+});
+
+prevButton.addEventListener("click", () => {
+  // clearInterval(timeOfSilding);
+  // clearTimeout(timeToStartSlide);
+  if (index === 0) {
+    listItemArray[index].classList.remove("active");
+    index = 2;
+    imagesContainer.style.left = `-${index}000px`;
+    listItemArray[index].classList.add("active");
+  } else if (index === 2) {
+    listItemArray[index].classList.remove("active");
+    index--;
+    imagesContainer.style.left = `-${index}000px`;
+
+    listItemArray[index].classList.add("active");
+  } else if (index === 1) {
+    listItemArray[index].classList.remove("active");
+    index = 0;
+    imagesContainer.style.left = `0px`;
+
+    listItemArray[index].classList.add("active");
+  }
+});
